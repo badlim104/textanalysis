@@ -12,8 +12,8 @@ Stage/Methodology:
 
 Future Direction:
 - Improve the accuracy and the speed of the analysis, and apply it to various types of articles over time.
-- Be able to understand how different clusters of these articles change over time (basically unsupervised learning with the time dimension added to it)
+- Be able to understand how different clusters of these articles change over time (basically unsupervised learning with the time dimension added to it).
 - Become proficient in choosing the right algorithm depending on the dataset at hand. 
-- Standardize an approach so that people can learn from this and apply it to collections of texts that fall into their areas of interest
+- Standardize an approach so that people can learn from this and apply it to collections of texts that fall into their areas of interest.
 
 For questions/comments/feedback, feel free to send an email to projecttext1@gmail.com. I am always delighted to learn from people. 
