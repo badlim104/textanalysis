@@ -11,6 +11,7 @@ Stage/Methodology:
 - Done with the data cleaning part, need to create vectors for each document so that I can apply k-means clustering.
 
 Future Direction:
+- Code is hacky at the moment. Make improvements over time. Need to better understand data structures and how to make algorithms more efficient. 
 - Improve the accuracy and the speed of the analysis, and apply it to various types of articles over time.
 - Be able to understand how different clusters of these articles change over time (basically unsupervised learning with the time dimension added to it).
 - Become proficient in choosing the right algorithm depending on the dataset at hand. 
