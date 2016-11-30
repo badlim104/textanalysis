@@ -10,7 +10,7 @@ content=soup.find_all("div",class_="story-content") #get the objects on the html
 
 #first page and the rest of the pages will have a different method for scraping since the URL convention is different after pg1
 
-first_page={} #nested dictionary with dates at outermost, and links and summaries in a list of dictionaries for each date. 
+first_page={} #this will be a dictionary of lists with the dates as the main keys, and links and summaries as values in a list
 prefix="http://www.reuters.com/" #links in the html are not complete, create this prefix and append the href to this
 
 
@@ -23,20 +23,20 @@ for element in content:
     else:
         first_page[date]=[{"link": prefix + element.a["href"], "summary": element.p.get_text()}]
     
-    
+#do some setting up so that you are scrape all pages efficiently    
 parsing_list=[] #list for p0,p1,p2,p3 etc
-soup_list=[] #create a list with 65 entries so that you also have soup1,soup2,soup3 etc. 
+soup_list=[] #create a list with 77 entries so that you also have soup1,soup2,soup3 etc. 
 content_list=range(0,78)
 
-#list for the contents of each page. has 66 entries 
+
 
 i=0
 x=0
 
-for x in range(79): #put the variables in soup_list (soup1,soup2 etc.)
+for x in range(79): #put the variables in soup_list (soup1,soup2 etc.). These are placeholders for scraping
     soup_list.append("soup"+str(x+1))
 
-for i in range(79): 
+for i in range(79): #similaryly, put the variables in the plist
     parsing_list.append("p"+str(i+1))
 
 a=0
@@ -69,25 +69,25 @@ while b<len(content_list):
     b+=1       
 
 
-import json #use JSON to write the nested dictionaries into files, have a nice naming convention for each
+
 
 
 universal_content_dict=titles_2.copy()
 universal_content_dict.update(first_page) #create a universal dictionary with all the pages' content in it 
 
 
-
+import json #use JSON to write the nested dictionaries into files
 with open("Universal_Content.json","w") as writeJSON: #dump universal_content_dict in JSON file
     json.dump(universal_content_dict,writeJSON)
 
-universal_word_list=[] 
+universal_word_list=[] #this will be a list of lists in the first step. will convert to one big list in the next step
 
 for key,item in universal_content_dict.iteritems(): #make a list of lists out of the contents in the summary keys in universal_content_dict
     for x in item:
         x['summary']=x['summary'].lower()
         universal_word_list.append(x['summary'].split())
 
-flatten=lambda universal_word_list:[item for sublist in universal_word_list for item in sublist] #function to make universal_word_list one big list
+flatten=lambda universal_word_list:[item for sublist in universal_word_list for item in sublist] #function to convert list of lists to one list
 universal_word_list=flatten(universal_word_list)    
 
 
