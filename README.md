@@ -16,4 +16,4 @@ Future Direction:
 - Become proficient in choosing the right algorithm depending on the dataset at hand. 
 - Standardize an approach so that people can learn from this and apply it to collections of texts that fall into their areas of interest.
 
-For questions/comments/feedback, feel free to send an email to projecttext1@gmail.com. I am always delighted to learn from people. 
+For questions/comments/feedback, feel free to send an email to projecttext1@gmail.com. I am always delighted to learn from people and discuss potential contributions. 
