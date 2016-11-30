@@ -119,7 +119,7 @@ for i in universal_word_counts.keys(): #put your super-arbitrary threshold of 16
     elif universal_word_counts[i]<=1:
         del universal_word_counts[i]
         
-print universal_word_counts
+
 
 
 
