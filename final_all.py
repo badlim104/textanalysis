@@ -141,7 +141,7 @@ tfidf_vectorizer = TfidfVectorizer(max_df=0.8, max_features=200000,
 
 %time tfidf_matrix = tfidf_vectorizer.fit_transform(all_summaries) #fit the vectorizer into your list of summaries 
 
-print(tfidf_matrix.shape) #explanation of a tfidf matrix is provided in the paper 
+print(tfidf_matrix.shape) 
 
 terms = tfidf_vectorizer.get_feature_names()  #features (stems) used in the analysis (after max_df and min_df is applied)
 
