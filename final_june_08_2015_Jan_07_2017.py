@@ -144,7 +144,7 @@ terms = vectorizer.get_feature_names()
 
 
 from sklearn.cluster import KMeans 
-km=KMeans(n_clusters=5,n_init=20,max_iter=10000000).fit(tfidf_matrix) 
+km=KMeans(n_clusters=6,n_init=20,max_iter=10000000).fit(tfidf_matrix) 
 
 clusters = km.labels_.tolist() 
 
@@ -163,10 +163,10 @@ print()
 
 sorted_centroids = km.cluster_centers_.argsort()[:, ::-1] 
 
-for i in range(5):
+for i in range(6):
     print("Cluster %d words:" % i, end='')
     
-    for ind in sorted_centroids[i, :20]: 
+    for ind in sorted_centroids[i, :5]: 
         print(' %s' % words_df.ix[terms[ind].split(' ')].values.tolist()[0][0].encode('utf-8', 'ignore'), end=',')
     print() 
     print() 
