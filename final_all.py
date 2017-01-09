@@ -148,7 +148,7 @@ terms = tfidf_vectorizer.get_feature_names()  #features (stems) used in the anal
 #cleaning is done. now the fun part. we apply the algorithm and see how it does
 
 from sklearn.cluster import KMeans 
-km=KMeans(n_clusters=5,n_init=20,max_iter=10000000).fit(tfidf_matrix) #to assess how well this does, you can use km.inertia_
+km=KMeans(n_clusters=6,n_init=20,max_iter=10000000).fit(tfidf_matrix) #to assess how well this does, you can use km.inertia_
 
 clusters = km.labels_.tolist() # algorithm used 5 clusters, each summary belongs to one cluster. put these cluster numbers in a list
 
@@ -170,10 +170,10 @@ print()
 
 order_centroids = km.cluster_centers_.argsort()[:, ::-1] #choose the words that are closest to the centroid for each doc.
 
-for i in range(5):
+for i in range(6):
     print("Cluster %d words:" % i, end='')
     
-    for ind in order_centroids[i, :20]: #change the 20 to look at however many words you want
+    for ind in order_centroids[i, :5]: #change the 20 to look at however many words you want
         print(' %s' % words_df.ix[terms[ind].split(' ')].values.tolist()[0][0].encode('utf-8', 'ignore'), end=',')
     print() 
     print()     
