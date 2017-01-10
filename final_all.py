@@ -178,12 +178,14 @@ for i in range(6):
     print() 
     print()     
 
-import matplotlib.pyplot as plt #plot the distibution of the articles per cluster
+import matplotlib.pyplot as plt
 
+fig_final=plt.figure()
 plt.bar(range(len(Counts)), Counts.values(), align='center')
 plt.xticks(range(len(Counts)), Counts.keys())
-
-plt.show()
-        
+fig_final.suptitle('01/01/2014 - 01/07/2017', fontsize=20)
+plt.xlabel('clusters', fontsize=16)
+plt.ylabel('number of articles', fontsize=16)
+plt.show()        
 
 
