@@ -9,6 +9,6 @@ Stage/Methodology:
 - Scraped articles about the country Turkey for the period Jan 2014-Jan 2017. There are around 1800 articles.
 - Applied k-means clustering to the summaries of all of the articles, as well as to different subsets of the summaries of articles to see trends in different periods.
 
-Here's a link to a paper about this analysis: 
+Here's a link to a paper about this analysis: http://bit.ly/2jxAyUD
 
 For questions/comments/feedback, feel free to send an email to projecttext1@gmail.com. I am always delighted to learn from people and discuss potential contributions. 
