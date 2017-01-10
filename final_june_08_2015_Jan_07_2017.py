@@ -174,7 +174,10 @@ for i in range(6):
     
 import matplotlib.pyplot as plt
 
+fig_1=plt.figure()
 plt.bar(range(len(Counts)), Counts.values(), align='center')
 plt.xticks(range(len(Counts)), Counts.keys())
-
+fig_1.suptitle('06/08/2015 - 01/07/2017', fontsize=20)
+plt.xlabel('clusters', fontsize=16)
+plt.ylabel('number of articles', fontsize=16)
 plt.show()
