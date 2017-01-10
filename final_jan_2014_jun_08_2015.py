@@ -146,4 +146,12 @@ for i in range(6):
     for ind in sorted_centroids[i, :5]: 
         print(' %s' % words_df.ix[terms[ind].split(' ')].values.tolist()[0][0].encode('utf-8', 'ignore'), end=',')
     print() 
-    
+ 
+import matplotlib.pyplot as plt
+
+
+
+plt.bar(range(len(Counts)), Counts.values(), align='center')
+plt.xticks(range(len(Counts)), Counts.keys())
+
+plt.show()
