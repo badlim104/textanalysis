@@ -6,7 +6,7 @@ Aim of the Project:
 
 Notes: 
 - Scrape method can be found in "only_summaries" files
-  For K_means:
+- For K_means:
     - Only_summaries means that I have used the summaries of articles for the analysis
     - Articles means that I have used whole articles for the analysis. 
   
