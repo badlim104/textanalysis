@@ -4,7 +4,10 @@ Analyzing news articles using Python
 Aim of the Project: 
 - To better understand the underlying trends in the national/international political scene by applying text analysis methods to collections of articles. 
 
-Note: Scrape method can be found in "only_summaries" files
+Notes: 
+- Scrape method can be found in "only_summaries" files
+- Only_summaries means that I have used the summaries of articles of the analysis
+
 
 Here's a link to a paper about this analysis: http://bit.ly/2k4FJbp
 
