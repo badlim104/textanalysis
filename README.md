@@ -12,6 +12,6 @@ Notes:
   
     
 
-Here's a link to a paper about this analysis: http://bit.ly/2k4FJbp
+
 
 For questions/comments/feedback, feel free to send an email to projecttext1@gmail.com. 
